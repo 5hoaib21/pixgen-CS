@@ -6,7 +6,7 @@ const Category = async () => {
   const data = await res.json()
   // console.log(data);
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 mb-5">
       {
         data.map(category => <Link key={category.id} href={`?category=${category.name.toLowerCase()}`}><Button variant="outline" >{category.name}</Button></Link>)
       }
